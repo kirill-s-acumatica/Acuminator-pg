@@ -151,6 +151,7 @@
     <MSBuild Projects="$(ProjectDir)ExternalDependency\src\ExternalDependency.csproj" Properties="Configuration=Debug" />
   </Target>
   <Target Name="BuildExternalExecutor" AfterTargets="PreBuildEvent">
+    <MSBuild Projects="$(ProjectDir)ExternalRunner\src\ExternalRunner.csproj" Targets="Restore" />
     <MSBuild Projects="$(ProjectDir)ExternalRunner\src\ExternalRunner.csproj" Properties="Configuration=Debug" />
   </Target>
 </Project>
